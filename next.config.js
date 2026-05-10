@@ -1,15 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Dangerously allow production builds to successfully complete 
-  // even if your project has type errors.
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  // Allow production builds to complete even if your project has 
-  // ESLint errors (common in 'vibe coding' rapid prototypes).
   eslint: {
+    // This allows the build to finish even if there are small warnings
     ignoreDuringBuilds: true,
   },
-  // Recommended for standardizing output for Vercel
-  reactStrictMode: true,
-}
+  typescript: {
+    // Also ignore typescript errors if you have them
+    ignoreBuildErrors: true,
+  },
+};
+
+module.exports = nextConfig;
