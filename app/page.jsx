@@ -169,7 +169,7 @@ export default function BucketsOfLove() {
                 <input autoFocus value={tempName} onChange={e => setTempName(e.target.value)} onBlur={() => { setName(tempName || "Alex"); setEditingName(false); }} onKeyDown={e => { if (e.key === "Enter") { setName(tempName || "Alex"); setEditingName(false); } }} className="border-b-2 border-pink-400 bg-transparent text-center outline-none" style={{ fontFamily: "'Playfair Display', serif", fontSize: "inherit", color: "#e11d48", width: Math.max((tempName.length||1)+1,4)+"ch" }} />
               ) : (
                 <span onClick={() => { setTempName(name); setEditingName(true); }} className="cursor-pointer transition-colors hover:text-pink-500" style={{ color: "#e11d48", textDecoration: "underline", textDecorationStyle: "dotted", textDecorationColor: "#f9a8d4" }} title="Tap to change name">{name}</span>
-              )} {'\''}s Bucket with Love!
+             )}&apos;s Bucket with Love!
             </h1>
             <p className="mt-2.5 text-sm" style={{ color: "#f472b6", fontStyle: "italic", fontFamily: "'Lora', serif" }}> Leave a little love — it goes a long way 🌸 </p>
           </div>
